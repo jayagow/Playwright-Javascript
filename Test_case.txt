@@ -1,0 +1,198 @@
+Test Case for Login, Transfer Fund, Logout (Parabank)
+
+LOGIN TEST CASES:
+SCENARIO 1:
+Title: Verify successful login with valid credentials (High/Critical Priority)
+
+Objective: Verify that the user can successfully log in to the Parabank website using valid credentials.
+Precondition:
+•	The Parabank website is accessible.
+Test Steps:
+1. Launch the Parabank website (https://parabank.parasoft.com/parabank/register.htm;jsessionid=4CE150FCDB0CE3623E0C79D09E143958 ) in any browser.
+2. Navigate to the login page.
+3. Enter valid credentials (username and password) into the respective fields.
+4. Click on the login button.
+Expected Results:
+•	The user should be logged in successfully with valid credentials.
+•	Verify that the user is successfully logged in and redirected to the dashboard.
+
+SCENARIO 2:
+Title: Verify unsuccessful login with invalid credentials (High Priority)
+
+Objective: Verify that the user cannot log in to the Parabank website using invalid credentials.
+Precondition:
+•	The Parabank website is accessible.
+Test Steps:
+1. Launch the Parabank website (https://parabank.parasoft.com/parabank/register.htm;jsessionid=4CE150FCDB0CE3623E0C79D09E143958 ) in any browser.
+2. Navigate to the login page.
+3. Enter invalid credentials (username and/or password) into the respective fields.
+4. Click on the login button.
+Expected Results:
+•	The user should not be logged in successfully with invalid credentials.
+•	Verify unsuccessful login with empty username and password.
+
+SCENARIO 3:
+Title: Verify unsuccessful login with empty username and password (High Priority)
+
+Objective: Verify that the user cannot log in with empty username and password fields.
+Precondition: 
+•	The user is not logged in to the parabank website
+Test Steps:
+1.	Navigate to the login page.
+2.	Leave the username and password fields empty.
+3.	Click on the login button
+Expected Results: 
+•	The login attempt should not be successful.
+•	An error message should be displayed indicating the reason for the unsuccessful login.
+
+SCENARIO 4:
+Title: Verify unsuccessful login with incorrect username (High Priority)
+
+Objective: Verify that the user cannot log in with an incorrect username.
+Precondition: 
+•	The user is not logged in to the parabank website
+Test Steps:
+1.	Navigate to the login page.
+2.	Enter an incorrect username and a valid password.
+3.	Click on the login button.
+Expected Results:
+•	The login attempt should not be successful.
+•	An error message should be displayed indicating the reason for the unsuccessful login.
+
+SCENARIO 5:
+Title: Verify unsuccessful login with incorrect password (High Priority)
+
+Objective: Verify that the user cannot log in with an incorrect password.
+Precondition: 
+•	The user is not logged in to the parabank website
+Test Steps:
+1.	Navigate to the login page.
+2.	Enter a valid username and an incorrect password.
+3.	Click on the login button.
+Expected Results:
+•	The login attempt should not be successful.
+•	An error message should be displayed indicating the reason for the unsuccessful login.
+
+TRANSFER FUNDS TEST CASES: 
+SCENARIO 6:
+Title: Verify successful funds get transfer (High/Critical Priority)
+
+Objective: Verify that funds can be successfully transferred between two accounts.
+Precondition:
+•	The user is logged in to the parabank website
+•	There are two accounts with sufficient funds available for transfer.
+Test Steps:
+1.	Navigate to the funds transfer page or section.
+2.	Select a source account and a destination account.
+3.	Enter the amount to transfer.
+4.	Click on the transfer button.
+5.	Verify that the transfer is successful and that the balances of both accounts are updated accordingly.
+6.	Optionally, verify that a confirmation message is displayed.
+Expected Results:
+•	The funds should be successfully transferred from the source account to the destination account.
+•	The balances of both accounts should be updated to reflect the transferred amount.
+•	Optionally, a confirmation message should be displayed indicating the successful transfer.
+
+SCENARIO 7:
+Title: Verify unsuccessful funds transfer with insufficient funds (High Priority)
+
+Objective: Verify that funds cannot be transferred if the source account has insufficient funds.
+Precondition:
+•	The user is logged in to the parabank website
+•	The source account has insufficient funds for the transfer.
+Test Steps:
+1.	Navigate to the funds transfer page or section.
+2.	Select a source account with insufficient funds and a destination account.
+3.	Enter the amount to transfer, which exceeds the balance of the source account.
+4.	Click on the transfer button.
+Expected Results:
+•	The funds transfer should not be successful due to insufficient funds in the source account.
+•	An error message or notification should be displayed indicating the reason for the unsuccessful transfer
+
+SCENARIO 8:
+Title: Verify unsuccessful funds transfer with invalid source account (Medium Priority)
+
+Objective: Verify that funds cannot be transferred if the source account is invalid.
+Precondition: 
+•	The user is logged in to the parabank website
+Test Steps:
+1.	Navigate to the funds transfer page or section.
+2.	Select an invalid source account and a valid destination account.
+3.	Enter a valid amount to transfer.
+4.	Click on the transfer button.
+Expected Results:
+•	The funds transfer should not be successful due to an invalid source account.
+•	An error message or notification should be displayed indicating the reason for the unsuccessful transfer.
+
+SCENARIO 9:
+Title: Verify unsuccessful funds transfer with zero amount (Medium Priority)
+
+Objective: Verify that funds cannot be transferred if the transfer amount is zero.
+Precondition: 
+•	The user is logged in to the parabank website.
+Test Steps:
+1.	Navigate to the funds transfer page or section.
+2.	Select a valid source account and a valid destination account.
+3.	Enter zero as the amount to transfer.
+4.	Click on the transfer button.
+Expected Results:
+•	The funds transfer should not be successful due to a zero-transfer amount.
+•	An error message or notification should be displayed indicating the reason for the unsuccessful transfer.
+
+SCENARIO 10:
+Title: Verify unsuccessful funds transfer with invalid destination account (Medium Priority)
+
+Objective: Verify that funds cannot be transferred if the destination account is invalid.
+Precondition: 
+•	The user is logged in to the parabank website.
+Test Steps:
+1.	Navigate to the funds transfer page or section.
+2.	Select a valid source account and an invalid destination account.
+3.	Enter a valid amount to transfer.
+4.	Click on the transfer button.
+Expected Results:
+•	The funds transfer should not be successful due to an invalid destination account.
+•	An error message or notification should be displayed indicating the reason for the unsuccessful transfer.
+
+LOGOUT TEST CASES:
+SCENARIO 11:
+Title: Verify successful logout (High/Critical Priority)
+
+Objective:Verify that the user can successfully log out of the parabank website.
+Precondition:
+•	The user is logged in to the parabank website.
+Test Steps:
+1.	Click on the logout button or link.
+2.	Verify that the user is logged out and redirected to the login page.
+Expected Results:
+•	After clicking on the logout button or link, the user should be logged out of the parabank website 
+•	The user should be redirected to the login page after successful logout.
+
+SCENARIO 12:
+Title: Verify unsuccessful logout with network interruption (Medium Priority)
+
+Objective: Verify that the user cannot log out if there is a network interruption during the logout process.
+Precondition: 
+•	The user is logged in to the Parabank website.
+Test Steps:
+1.	Click on the logout button or link.
+2.	Simulate a network interruption during the logout process.
+Expected Results:
+•	The logout action should not be successful.
+•	The user should remain logged in or be redirected to an error page indicating the network issue.
+
+SCENARIO 13:
+Title: Verify unsuccessful logout with session timeout (Low Priority)
+
+Objective: Verify that the user cannot log out if the session has expired.
+Precondition: 
+•	The user's session on the Parabank website has timed out.
+Test Step:
+1.	Attempt to click on the logout button or link.
+Expected Results:
+•	The logout action should not be successful.
+•	The user should remain on the current page without being redirected.
+
+
+
+
